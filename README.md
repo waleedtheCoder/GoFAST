@@ -100,6 +100,9 @@ python test.py
 **Author and Contributors**
 
 Waleed Bin Aamer
+
 Maria Nadeem
+
 Dia Ejaz
+
 Shamikh Naqvi
