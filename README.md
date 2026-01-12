@@ -30,17 +30,26 @@ Email Service: SMTP (configured in mailer.py)
 
 Environment Management: python-dotenv
 
-**Project Structure
-GoFAST/**
+**Project Structure**
+**GoFAST/**
 │
+
 ├── app.py           # Main Flask application
+
 ├── db.py            # Database connection and setup
+
 ├── models.py        # Database models
+
 ├── mailer.py        # Email notification logic
+
 ├── test.py          # Testing file
+
 ├── new.py           # Additional or experimental logic
+
 ├── .env             # Environment variables (not committed)
+
 └── .gitattributes
+
 
 **Installation and Setup
 1. Clone the repository**
