@@ -51,8 +51,8 @@ Environment Management: python-dotenv
 └── .gitattributes
 
 
-**Installation and Setup
-1. Clone the repository**
+**Installation and Setup**
+**1. Clone the repository**
 git clone https://github.com/USERNAME/GoFAST.git
 cd GoFAST
 
@@ -71,9 +71,13 @@ pip install flask requests python-dotenv
 Create a .env file in the root directory:
 
 FLASK_ENV=development
+
 SECRET_KEY=your_secret_key
+
 DATABASE_URL=your_database_url
+
 MAIL_USERNAME=your_email
+
 MAIL_PASSWORD=your_email_password
 
 **5. Run the application**
