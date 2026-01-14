@@ -1,0 +1,93 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #091b2e, #f45c43); /* Consistent gradient background */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OTP Container */
+.otp-container {
+    background-color: #1b2a41; /* Dark background for the container */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+/* Heading Style */
+.otp-container h1 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Description Text */
+.otp-container p {
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #394e70;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #2a3e5d;
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(to right, #6a0572, #b83280);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #b83280, #6a0572);
+}
+
+button:active {
+    transform: scale(0.97);
+}

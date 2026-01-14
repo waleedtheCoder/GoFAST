@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #091b2e, #f45c43);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background: none;
+    font-family: 'Lexend Deca', sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .title {
+    font-size: 32px;
+    color: #0093dd;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Dashboard Section */
+.dashboardPage {
+    text-align: center;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.headingContainer h1 {
+    font-size: 36px;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.filterContainer {
+    margin: 20px 0;
+}
+
+.filterContainer button {
+    padding: 10px;
+    background-color: #0093dd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.filterContainer button:hover {
+    background-color: #007bb3;
+}
+
+/* Table Style */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2a3e5d;
+    color: white;
+}
+
+td {
+    background-color: #1b2a41;
+    color: white;
+}

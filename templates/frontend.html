@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFast Ride Sharing</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+   <!-- External JavaScript file -->
+
+   <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+               
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin: 2px 0;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+     <nav>
+        <ul>
+            <li><a href="/driver">Add Driver</a></li>
+            <li><a href="/passenger">Add Passenger</a></li>
+            <li><a href="/drivers">Available Rides</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to GoFast Ride Sharing</h1>
+
+    <!-- Existing content -->
+    <div>
+        <h3>Calculate Distance</h3>
+        
+        <label for="origin">Origin:</label>
+        <input 
+            type="text" 
+            id="origin" 
+            placeholder="Enter origin or select on map" 
+            oninput="fetchPlacesSuggestions('origin', 'origin-suggestions')"
+        />
+        <ul id="origin-suggestions"></ul>
+        
+        <label for="destination">Destination:</label>
+        <input 
+            type="text" 
+            id="destination" 
+            placeholder="Enter destination or select on map" 
+            oninput="fetchPlacesSuggestions('destination', 'destination-suggestions')"
+        />
+        <ul id="destination-suggestions"></ul>
+
+        <button onclick="calculateDistance()">Calculate Distance</button>
+        <button onclick="displayRoute()">Show Route</button>
+        <button onclick="resetMarkers()">Reset Markers</button>
+        <button onclick="useCurrentLocation()">Use Current Location for Pickup</button>
+
+        <button onclick="setFastNucesPickup()">Pick up from Fast Nuces</button>
+        <button onclick="setFastNucesDropoff()">Drop off at Fast Nuces</button>
+
+        <p id="distance-result"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Google Maps JavaScript API -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJfrs1UWU7uQWUmNt-3Yc_XnGMkNw9EM&callback=initMap">
+    </script>
+</body>
+</html>

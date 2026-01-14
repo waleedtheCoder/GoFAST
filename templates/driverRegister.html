@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/driverRegister.css">
+    <title>Driver Details - GoFAST</title>
+</head>
+<body>
+    <div class="details-container">
+        <h1>Driver Registration Details</h1>
+        <form id="driver-details-form">
+            <div>
+                <label for="car-make-model">Car Make and Model:</label>
+                <input type="text" id="car-make-model" name="car-make-model" required>
+            </div>
+            <div>
+                <label for="license-number">Driver's License Number:</label>
+                <input type="text" id="license-number" name="license-number" required>
+            </div>
+            <div>
+                <label for="number-plate">Number Plate:</label>
+                <input type="text" id="number-plate" name="number-plate" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <!-- Feedback Message -->
+        <div id="feedback-message" class="message"></div>
+    </div>
+
+    <script src="/static/js/driverRegister.js" defer></script>
+</body>
+</html>

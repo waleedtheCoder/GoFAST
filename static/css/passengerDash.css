@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #091b2e, #f45c43);
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: none;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.navbar .title {
+    font-size: 32px;
+    color: #0093dd;
+    font-weight: bold;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-icons img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-icons img:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    text-align: center;
+}
+
+.welcome-text {
+    margin-bottom: 50px; /* Space between "Hello" and scrolling menu */
+    font-size: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px; /* Push "Hello" text further down */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropdown 1.5s ease-out forwards;
+}
+
+@keyframes dropdown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Drivers Section */
+.drivers-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Driver Scroll Section */
+.driver-scroll {
+    display: grid; /* Grid layout for requests */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Scrollbar Customization */
+.driver-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.driver-scroll::-webkit-scrollbar-thumb {
+    background: #ff4c4c;
+    border-radius: 10px;
+}
+
+.driver-scroll::-webkit-scrollbar-track {
+    background: #091b2e;
+}
+
+/* Individual Offer Cards */
+.offer-item {
+    background-color: #2a3e5d;
+    border-radius: 10px;
+    padding: 15px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.offer-item:hover {
+    transform: scale(1.02);
+    background-color: #394e70;
+}
+
+.offer-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.offer-item strong {
+    color: #f9f9f9;
+}
+
+/* Start Ride Button */
+.start-ride-btn {
+    align-self: center;
+    background: linear-gradient(to right, #ff6666, #ff4c4c);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.start-ride-btn:hover {
+    background: #ff3333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+}

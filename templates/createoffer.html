@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Offer - GoFast</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link rel="stylesheet" href="/static/css/createoffer.css">
+    
+    <!-- Google Maps API Script for Places Autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJfrs1UWU7uQWUmNt-3Yc_XnGMkNw9EM&libraries=places" defer></script>
+    
+    <script src="/static/js/createoffer.js" defer></script>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="title">GoFast</div>
+        <div class="navbar-icons">
+            <a href="passengerDashboard"><img src="/static/icons/home-icon.png" alt="Home"></a>
+            <a href="createoffer"><img src="/static/icons/create.png" alt="Create req"></a>
+            <a href="passnotif"><img src="/static/icons/notification-icon.png" alt="Notifications"></a>
+            <a href="passenger-profile"><img src="/static/icons/profile-icon.png" alt="Profile"></a>
+            <a href="switchmode"><img src="/static/icons/switch-icon.png" alt="Switch Mode"></a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Create Offer Section -->
+        <div id="create-offer">
+            <h2>Create a Carpooling Offer</h2>
+            <form id="offerForm">
+                <label for="start-location">Starting Location</label>
+                <input type="text" id="start-location" name="start-location" placeholder="e.g., Johar Town, Lahore" required
+                       oninput="fetchPlacesSuggestions('start-location', 'start-location-suggestions')">
+
+                <div id="start-location-suggestions" class="suggestions"></div>
+
+                <label for="end-location">Ending Location</label>
+                <input type="text" id="end-location" name="end-location" placeholder="e.g., Mall Road, Lahore" required
+                       oninput="fetchPlacesSuggestions('end-location', 'end-location-suggestions')">
+
+                <div id="end-location-suggestions" class="suggestions"></div>
+
+                <label for="car-capacity">Car Capacity</label>
+                <input type="number" id="car-capacity" name="car-capacity" min="1" placeholder="e.g., 4" required>
+
+                <label for="car-name">Car Name</label>
+                <input type="text" id="car-name" name="car-name" placeholder="e.g., Honda Civic" required>
+
+                <label for="note">Additional Note (Optional)</label>
+                <textarea id="note" name="note" rows="4" placeholder="e.g., Please be on time."></textarea>
+
+                <button type="submit">Create Offer</button>
+            </form>
+        </div>
+
+        <!-- Offers List Section -->
+        <div id="offers-display">
+            <h3>Your Created Offers</h3>
+            <div id="offers-list">
+                <p>No offers created yet.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GoFast. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Ensure the dynamic content updates after the page loads
+        window.onload = () => {
+            updateOffersDisplay();
+        };
+    </script>
+</body>
+</html>

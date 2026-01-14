@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - GoFAST</title>
+    <link rel="stylesheet" href="/static/css/adminDashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title" onclick="window.location.href='/admin'">GoFAST</div>
+    </nav>
+    <main class="dashboardPage">
+        <div class="headingContainer">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="filterContainer">
+            <button onclick="filterUsers('driver')">Drivers</button>
+            <button onclick="filterUsers('passenger')">Passengers</button>
+        </div>
+        <table id="usersTable">
+            <thead>
+                <tr id="tableHeaders">
+                    <!-- Headers will be inserted dynamically -->
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </main>
+    <script src="/static/js/adminDashboard.js"></script>
+</body>
+</html>

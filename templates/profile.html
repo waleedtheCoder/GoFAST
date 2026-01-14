@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Profile - GoFAST</title>
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <script src="/static/js/profile.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title">GoFAST</div>
+        <div class="navbar-icons">
+            <a href="driver" title="Home"><img src="/static/icons/home-icon.png" alt="Home"></a>
+            <a href="notif" title="Notifications"><img src="/static/icons/notification-icon.png" alt="Notifications"></a>
+            <a href="profile" title="Profile"><img src="/static/icons/profile-icon.png" alt="Profile"></a>
+            <a href="passengerDash" title="Switch Mode"><img src="/static/icons/switch-icon.png" alt="Switch Mode"></a>
+    </nav>
+    <main class="profile-page">
+        <div class="heading-container">
+            <h1>Driver Profile</h1>
+        </div>
+        <div class="profile-container">
+            <div class="profile-details">
+                <img id="profile-pic" src="{{ profilePicture or '/static/icons/profile.png' }}" alt="Profile Pic" class="profile-pic">
+                <form id="profile-form" method="POST" action="/update_dprofile">
+                    <input type="hidden" id="userID" value="{{ userID }}">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" value="{{ name }}" disabled>
+                    </div>
+                    <div class="form-row">
+                        <label for="roll">User ID</label>
+                        <input type="text" id="roll" value="{{ userID }}" disabled>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="{{ email }}" disabled>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" value="{{ phone }}">
+                    </div>
+                    <div class="form-row">
+                        <label for="rating">Rating</label>
+                        <input type="text" id="rating" value="{{ rating }}" disabled>
+                    </div>
+                    <div class="form-row">
+                        <label for="pass">Password</label>
+                        <input type="text" id="pass" value="{{ password }}">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="phone">vehicle ID</label>
+                        <input type="tel" id="vehicleID" value="{{ vehicleID }}" disabled>
+                    </div>
+                    <div class="form-row">
+                        <label for="rating">license Plate</label>
+                        <input type="text" id="licensePlate" value="{{ licensePlate }}">
+                    </div>
+                    <div class="form-row">
+                        <label for="pass">Available Seats</label>
+                        <input type="text" id="availableSeats"  value="{{ availableSeats }}">
+                    </div>
+                    <div class="form-row">
+                        <label for="pass">make and model</label>
+                        <input type="text" id="make_model"  value="{{ make_model }}">
+                    </div>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+    
+</body>
+</html>
+
+
+
+

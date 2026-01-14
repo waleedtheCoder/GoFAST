@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Dashboard - Accepted Offers</title>
+    <link rel="stylesheet" href="/static/css/passengerDash.css">
+    <script src="/static/js/passengerDash.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">GoFast</div>
+        <ul class="nav-links">
+            <a href="/passengerDash"><img src="/static/icons/home-icon.png" alt="Home"></a>
+            <a href="/createoffer"><img src="/static/icons/create.png" alt="Create req"></a>
+            <a href="/passnotif"><img src="/static/icons/notification-icon.png" alt="Notifications"></a>
+            <a href="/passenger-profile"><img src="/static/icons/profile-icon.png" alt="Profile"></a>
+            <a href="/switchmode"><img src="/static/icons/switch-icon.png" alt="Switch Mode"></a>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Accepted Driver Offers Section -->
+        <section class="drivers-section">
+            <h2 class="section-heading">Accepted Ride Requests</h2>
+            
+            <div class="driver-scroll" id="accepted-offers">
+                <div class="offer-item">
+                    <p><strong>Driver Name:</strong> John Doe</p>
+                    <p><strong>Requested Car:</strong> Honda Civic</p>
+                    <p><strong>Driver Car:</strong> Toyota Corolla</p>
+                    <p><strong>Driver Car Number:</strong> ABC-123</p>
+                    <p><strong>Status:</strong> Accepted</p>
+                    <p><strong>Offer Timestamp:</strong> 2024-12-02 10:30 AM</p>
+                    <button class="start-ride-btn" data-passenger-offer-id="1" data-driver-offer-id="101">Start Ride</button>
+                </div>
+                <!-- Additional cards will appear here -->
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GoFast. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #091b2e, #f45c43);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: none;
+    font-family: 'Lexend Deca', sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .title {
+    font-size: 32px;
+    color: #0093dd;
+    font-weight: bold;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-icons img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Page */
+.contact-page {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0;
+    flex: 1;
+}
+
+/* Heading Container */
+.heading-container h1 {
+    font-size: 36px;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+/* WhatsApp Button */
+#whatsapp-button {
+    padding: 12px 20px;
+    background-color: #25D366; /* WhatsApp green color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#whatsapp-button:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}

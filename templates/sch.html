@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Schedule - GoFast</title>
+    <link rel="stylesheet" href="sch.css"> <!-- Link to CSS -->
+    <script src="sch.js" defer></script> <!-- Link to JS -->
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">GoFast</div>
+        <ul class="nav-links">
+            <li><a href="driver.html">Dashboard</a></li>
+            <li><a href="createoffer.html">Create Offer</a></li>
+            <li><a href="sch.html">Schedule</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="notif.html">Notifcation</a></li>
+            <li><button id="switch-mode-btn">Switch to Passenger Mode</button></li>
+            <li>
+                <div class="profile-icon">
+                    <img src="profile.png" alt="Profile">
+                    <a href="profile.html">Profile</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="schedule">
+            <h2>Your Schedule</h2>
+            
+            <!-- Form to Add/Update Schedule -->
+            <div id="schedule-form">
+                <h3>Add Your Schedule</h3>
+                <form id="scheduleForm">
+                    <label for="day">Select Day</label>
+                    <select id="day" name="day">
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select>
+
+                    <label for="time">Time </label>
+                    <input type="text" id="time" name="time" placeholder="e.g., 8:00 AM - 6:00 PM" required>
+
+                    <button type="submit">Add/Update</button>
+                </form>
+            </div>
+
+            <!-- Schedule Display -->
+            <div id="schedule-display">
+                <h3>Your Schedule</h3>
+                <div id="schedule-list">
+                    <p>No schedule uploaded yet.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

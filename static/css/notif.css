@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #091b2e, #f45c43);
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar Style (unchanged) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: none;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.navbar .title {
+    font-size: 32px;
+    color: #0093dd;
+    font-weight: bold;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-icons img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Heading Container */
+.heading-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.heading-container h1 {
+    font-size: 36px;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Notifications Container */
+.notifications-container {
+    height: 400px; /* Adjust based on desired height */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #1b2a41;
+    border-radius: 8px;
+    width: 60%; /* Center the container */
+}
+
+/* Notification Item Style */
+.notification-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #2a3e5d;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.notification-item:hover {
+    background-color: #394e70;
+}
+
+.notification-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.notification-item p {
+    font-size: 14px;
+}

@@ -1,0 +1,197 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #091b2e, #f45c43);
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps everything properly spaced */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: none;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.navbar .title {
+    font-size: 32px;
+    color: #0093dd;
+    font-weight: bold;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Heading Section */
+.heading-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.heading-container h1 {
+    font-size: 36px;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.heading-container p {
+    font-size: 18px;
+    color: #f9f9f9;
+}
+
+/* Content Sections */
+.notifications-container {
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #1b2a41;
+    border-radius: 8px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* To keep layout structure intact */
+    overflow: hidden; /* Prevent overflow in the section */
+}
+
+/* Pickup Route Section */
+#pickup-route {
+    max-height: 150px;  /* Set max height for the pickup route container */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    margin-top: 15px;
+}
+
+/* Requests List */
+#requests-list {
+    max-height: 350px;  /* Limit the height of the requests section */
+    overflow-y: auto;   /* Enable scrolling if content exceeds the height */
+    padding-right: 10px; /* To avoid scrollbar overlap */
+    margin-bottom: 15px; /* Add some spacing below */
+}
+
+/* Individual request item */
+.notification-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #2a3e5d;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.notification-item:hover {
+    background-color: #394e70;
+}
+
+.notification-item p {
+    font-size: 16px;
+}
+
+.notification-item button {
+    background: linear-gradient(to right, #ff6666, #ff4c4c);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.notification-item button:hover {
+    background: #ff3333;
+}
+
+.notification-item button + button {
+    margin-left: 10px;
+}
+
+/* Make sure requests section is scrollable without breaking layout */
+#requests {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    max-height: 200px;
+    overflow-y: auto; /* Enable scrolling for this container */
+}
+
+/* Requests List Styling */
+#offers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Offer Card Styling */
+.offer-card {
+    background-color: #2a3e5d; /* Original color */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.offer-card:hover {
+    transform: scale(1.03); /* Subtle zoom effect */
+    background-color: #394e70; /* Slightly lighter hover effect */
+}
+
+/* Offer Card Content */
+.offer-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.offer-card strong {
+    color: #f9f9f9;
+}
+
+/* Buttons */
+.offer-card button {
+    background: linear-gradient(to right, #ff6666, #ff4c4c); /* Same gradient */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+    transition: background 0.3s;
+}
+
+.offer-card button:hover {
+    background: #ff3333; /* Original hover color */
+}
+

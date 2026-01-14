@@ -1,0 +1,140 @@
+/* Reset */
+body, h1, h2, p, ul, li, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #f6f9fc, #dbe4f1);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #0066cc, #0052a3);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a, .nav-links button {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links button:hover {
+    color: #f0e68c;
+}
+
+/* Profile Icon */
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+/* Schedule Section */
+#schedule {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+#schedule h2, #schedule h3 {
+    text-align: center;
+    color: #0052a3;
+}
+
+#schedule-form {
+    margin-bottom: 2rem;
+}
+
+#schedule-form label {
+    display: block;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+#schedule-form input, #schedule-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#schedule-form button {
+    padding: 0.75rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#schedule-form button:hover {
+    background-color: #004d99;
+}
+
+#schedule-list {
+    background: #eef5ff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-item {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}

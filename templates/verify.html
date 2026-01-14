@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification - GoFAST</title>
+    <link rel="stylesheet" href="/static/css/verify.css">
+</head>
+<body>
+    <div class="otp-container">
+        <h1>Verify Your Email</h1>
+        <p>A one-time password (OTP) has been sent to your registered email. Please enter it below to verify your account.</p>
+        <form action="/validate" method="post" id="otp-form">
+            <div class="input-group">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter your OTP" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
